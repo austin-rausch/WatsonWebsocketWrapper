@@ -1,2 +1,2 @@
-# **watsonWebSocketSTTwrapper**
+# **Watson Speech-to-Text websocket wrapper**
 A different name is probably appropriate...
