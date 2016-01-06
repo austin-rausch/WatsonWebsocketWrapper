@@ -1,2 +1,3 @@
 # **Watson Speech-to-Text websocket wrapper**
-A different name is probably appropriate...
+
+ **A wrapper for IBM Watson's speech to text service using websockets.**
