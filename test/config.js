@@ -4,15 +4,8 @@ module.exports = {
     */
     STT_CREDENTIALS: {
         url: 'https://stream.watsonplatform.net/speech-to-text/api',
-        username: 'USERNAME',
-        password: 'PASSWORD',
+        username: '<ENTER USERNAME HERE>',
+        password: '<ENTER PASSWORD HERE>',
         version:'v1'
-    },
-    /**
-    * Alchemy language credentials
-    */
-    AL_CREDENTIALS: {
-        'url': 'https://gateway-a.watsonplatform.net/calls',
-        'apikey': 'KEY',
     }
 };
