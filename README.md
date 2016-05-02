@@ -4,7 +4,7 @@
 
 # API
 
-## 'socket = new WatsonWebsocketWrapper({opts}, username, password);'
+## socket = new WatsonWebsocketWrapper({opts}, username, password);
 
 default opts:
 ```js
