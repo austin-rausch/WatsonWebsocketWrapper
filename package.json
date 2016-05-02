@@ -2,7 +2,7 @@
   "name": "watsonWebSocketSTTwrapper",
   "author": "Austin Rausch (ahr5067@psu.edu)",
   "version": "0.0.1",
-  "description": "use IBM watsons speech to text services via websockets",
+  "description": "uses IBM watson's speech to text services via websockets",
   "main": "index.js",
   "dependencies": {
     "extend": "^3.0.0",
@@ -17,5 +17,5 @@
     "test": "mocha --ui bdd --reporter spec ./test"
   },
   "license": "MIT",
-  "repository": "https://ahr5067@bitbucket.org/ahr5067/watsonsttwebsocket.git"
+  "repository": "https://github.com/austin-rausch/WatsonWebsocketWrapper.git"
 }

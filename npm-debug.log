@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/austin/.nvm/versions/node/v4.2.6/bin/node',
+1 verbose cli   '/home/austin/.nvm/versions/node/v4.2.6/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/austin/nodeProjects/WatsonWebsocketWrapper',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package.tgz',
+9 verbose tar pack   '/home/austin/nodeProjects/WatsonWebsocketWrapper' ]
+10 verbose tarball /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package.tgz
+11 verbose folder /home/austin/nodeProjects/WatsonWebsocketWrapper
+12 info prepublish watsonWebSocketSTTwrapper@0.0.1
+13 verbose addLocalTarball adding from inside cache /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package.tgz
+14 silly cache afterAdd watsonWebSocketSTTwrapper@0.0.1
+15 verbose afterAdd /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package/package.json not in flight; writing
+16 verbose afterAdd /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package/package.json written
+17 silly publish { name: 'watsonWebSocketSTTwrapper',
+17 silly publish   author: { name: 'Austin Rausch', url: 'ahr5067@psu.edu' },
+17 silly publish   version: '0.0.1',
+17 silly publish   description: 'uses IBM watson\'s speech to text services via websockets',
+17 silly publish   main: 'index.js',
+17 silly publish   dependencies: { extend: '^3.0.0', request: 'latest', ws: 'latest' },
+17 silly publish   devDependencies: { chai: '^3.4.1', mocha: '^2.3.3' },
+17 silly publish   scripts: { test: 'mocha --ui bdd --reporter spec ./test' },
+17 silly publish   license: 'MIT',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/austin-rausch/WatsonWebsocketWrapper.git' },
+17 silly publish   readme: '# **Watson Speech-to-Text websocket wrapper**\r\n\r\n **A wrapper for IBM Watson\'s speech to text service using websockets.**\r\n\r\n# API\r\n\r\n## \'socket = new WatsonWebsocketWrapper({opts}, username, password);\'\r\n\r\ndefault opts:\r\n```js\r\n{\r\n        \'action\' : \'start\',\r\n        \'content-type\' : \'audio/l16;rate=16000\',\r\n        \'continuous\' : true,\r\n        \'inactivity_timeout\' : -1,\r\n        \'keywords\' : [],\r\n        \'keywords_threshold\' : null,\r\n        \'max_alternatives\' : 1,\r\n        \'interim_results\' : true,\r\n        \'word_alternatives_threshold\' : null,\r\n        \'word_confidence\' : false,\r\n        \'timestamps\' : false,\r\n        \'profanity_filter\' : true,\r\n        \'onMessage\' : function (message) {},\r\n        \'onFinal\' : function (message) {},\r\n        \'onError\' : function (error) {}\r\n};\r\n```\r\nThe three options titled \'onMessage\', \'onFinal\' and \'onError\' are where\r\nbehavior the the speech to text results should be added.\r\n\r\nonMessage is used when \'interim_results\' is true. The parameter \'message\' is the\r\nreturned string.\r\n\r\nonFinal is when a final result is sent back from the service. The parameter\r\n\'message\' is the returned string.\r\n\r\nAnother thing to note, the optioned titled \'max_alternatives\' should stay 1.\r\nThis module does not take advantage or alternatives, but instead just takes the\r\nfirst result.\r\n\r\nThe username and password are acquired from IBM bluemix console.\r\n\r\n## socket.start();\r\n\r\nSends the start message to the watson endpoint,\r\nThis should be called after the \'ready\' event is fired,\r\n\'open\' will be emitted after this method once blobs are ready to be sent.\r\n\r\n## socket.sendBlob(blob);\r\n\r\nSends an audio chunk.  This should be in the format specified by \'content-type\'\r\nin the constructor opts.\r\n\r\n## socket.close();\r\n\r\ncloses the underlying websocket connection, emits \'closed\' when clean up is done\r\n\r\n\r\n# Events\r\n\r\n## .on(\'ready\', function() {});\r\n\r\nThis is emitted after credentials are verified.\r\nstart() should be called after this.\r\n\r\n## .on(\'open\', function () {});\r\n\r\nThis is emitted after the underlying websocket connection has been opened.\r\nAfter this event blobs can be sent.\r\n\r\n## .on(\'close\', function () {});\r\n\r\nThis is emitted after .close() has been called and\r\nthe connections have been cleaned up.\r\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'c9a068a6778e24c6586f351cdebf30ab36ed859c',
+17 silly publish   bugs: { url: 'https://github.com/austin-rausch/WatsonWebsocketWrapper/issues' },
+17 silly publish   homepage: 'https://github.com/austin-rausch/WatsonWebsocketWrapper#readme',
+17 silly publish   _id: 'watsonWebSocketSTTwrapper@0.0.1',
+17 silly publish   _shasum: 'f1d0f59d190e5a0ad768124553edb4a378844c94',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name watsonWebSocketSTTwrapper
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/watsonWebSocketSTTwrapper
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /home/austin/.npm/watsonWebSocketSTTwrapper/0.0.1/package.tgz
+25 verbose request uri https://registry.npmjs.org/watsonWebSocketSTTwrapper
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 8:04:42 PM
+28 verbose request using bearer token for auth
+29 verbose request id f1d99af56d1508ac
+30 http request PUT https://registry.npmjs.org/watsonWebSocketSTTwrapper
+31 http 403 https://registry.npmjs.org/watsonWebSocketSTTwrapper
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '128',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Mon, 02 May 2016 00:04:50 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-atl6245-ATL',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1462147481.769757,VS0,VE8327',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 verbose request invalidating /home/austin/.npm/registry.npmjs.org/watsonWebSocketSTTwrapper on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 0.0.1. Try bumping the version to 1.0.0" : watsonWebSocketSTTwrapper
+35 verbose stack     at makeError (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/home/austin/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid watsonWebSocketSTTwrapper
+38 verbose cwd /home/austin/nodeProjects/WatsonWebsocketWrapper
+39 error Linux 3.19.0-58-generic
+40 error argv "/home/austin/.nvm/versions/node/v4.2.6/bin/node" "/home/austin/.nvm/versions/node/v4.2.6/bin/npm" "publish"
+41 error node v4.2.6
+42 error npm  v2.14.12
+43 error code E403
+44 error "You cannot publish over the previously published version 0.0.1. Try bumping the version to 1.0.0" : watsonWebSocketSTTwrapper
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
