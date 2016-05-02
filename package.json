@@ -1,7 +1,7 @@
 {
   "name": "watsonWebSocketSTTwrapper",
   "author": "Austin Rausch (ahr5067@psu.edu)",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "uses IBM watson's speech to text services via websockets",
   "main": "index.js",
   "dependencies": {
